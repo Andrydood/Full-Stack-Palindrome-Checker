@@ -1,0 +1,124 @@
+/**
+ * @Author: andreacasino
+ * @Date:   2017-07-09T19:28:27+01:00
+ * @Last modified by:   andreacasino
+ * @Last modified time: 2017-09-17T19:31:51+01:00
+ */
+
+ #app{
+   font-family: 'Quattrocento Sans', sans-serif;
+ }
+
+ #header{
+   height:340px;
+   background: #238F66;
+   width: 100%
+ }
+
+ #title{
+   height: 150px;
+   text-align: center;
+   color:#fff;
+   font-weight: 700;
+   font-size: 50px;
+   padding: 40px;
+ }
+
+ #form{
+  border: solid #000;
+  border-width: 1px 1px;
+  border-color: #cccccc;
+  border-radius: 25px;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 5px;
+ }
+
+ #searchField,
+ #searchField:focus,
+ #searchField:hover{
+   border:none;
+   box-shadow: none;
+   background: none;
+   height: 25px;
+   outline: none;
+   padding-left: 10px;
+   width: 85%;
+ }
+
+ #searchField:-webkit-autofill,
+ #searchField:-webkit-autofill:hover,
+ #searchField:-webkit-autofill:focus  {
+   -webkit-box-shadow: 0 0 0 1000px white inset !important;
+ }
+
+ #searchButton{
+   cursor: pointer;
+   opacity: 0.8;
+   float:right;
+   padding-top: 3px;
+   padding-right: 10px;
+ }
+
+ #stringEval{
+   height: 50px;
+   text-align: center;
+   font-size: 20px;
+   padding-top: 35px;
+   color: #fff;
+ }
+
+#formContainer{
+  padding: 20px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#buttonContainer{
+  width: 100%;
+  bottom: 5px;
+  padding-top: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#pageButtons{
+  text-align: center;
+  padding: 10px;
+}
+
+#deleteButtonContainer{
+  width: 100%;
+}
+
+#deleteButton{
+  height:30px;
+  width:180px;
+  font-weight: 600;
+  background-color:#fff;
+  border-radius: 25px;
+  border: 2px solid #025D3B;
+  text-align: center;
+  padding-top: 4px;
+  cursor:pointer;
+  color:#025D3B;
+  margin: 0 auto;
+}
+
+#deleteButton:hover{
+  color:#fff;
+  background-color: #117650;
+}
+
+#deleteButton:active{
+  transform:scale(0.95);
+}

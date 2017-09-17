@@ -1,0 +1,38 @@
+/**
+ * @Author: andreacasino
+ * @Date:   2017-09-17T17:58:12+01:00
+ * @Last modified by:   andreacasino
+ * @Last modified time: 2017-09-17T19:31:57+01:00
+ */
+
+#listContainer{
+   width: 100%;
+ }
+
+#resultList{
+  height: 400px;
+  padding-top: 30px;
+  width: 500px;
+  margin-bottom: 30px;
+}
+
+.result{
+  padding-top:8px;
+  border: 2px solid #555;
+  border-bottom: 0;
+  width: 500px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  overflow: scroll;
+}
+
+.result:last-child{
+  border: 2px solid #555;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.result:first-child{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
