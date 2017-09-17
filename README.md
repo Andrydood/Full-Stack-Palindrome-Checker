@@ -22,7 +22,7 @@ The front end is firstly compromised of a text box to input a string. By then su
 
 ## Run Instructions
 
-The dependencies of the back end are Python 3.6, Django, Django-REST and . The front end dependencies are node-js(npm), react-js and react bootstrap.
+The dependencies of the back end are Python 3.6, Django, Django-REST and . The front end dependencies are node-js(npm), react-js and react bootstrap. These are already present within the included virtual environment and the npm libraries.
 
 ### Back End
 
