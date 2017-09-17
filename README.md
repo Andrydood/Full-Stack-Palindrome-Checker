@@ -31,5 +31,25 @@ Firstly, the virtual environment is activated with
 cd backEnd/
 source bin/activate
 ```
+To then run the server use
+```
+cd src
+python manage.py runserver
+```
+
+This will run on http://127.0.0.1:8000/
 
 ### Front End
+
+In a different terminal window, the react front end is activated with
+
+```
+cd frontEnd/src
+npm start
+```
+
+This will run on http://localhost:4444/
+
+```
+
+
