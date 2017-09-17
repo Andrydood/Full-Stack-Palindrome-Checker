@@ -18,10 +18,16 @@ Unit tests for this system can be found in backEnd/src/main/tests.py. These test
 
 ### Front End
 
-
+The front end is firstly compromised of a text box to input a string. By then submitting this (using enter or pressing the button), the system will communicate with the API and will show the result of the evaluation below. The list of palindromes can be seen below this, 10 at a time. If the total number of palindromes exceeds 10, a second page is available and can be accessed through the arrows. Finally, the delete button deletes all the palindromes.
 
 ## Run Instructions
 
+The dependencies of the back end are Python 3.6, Django, Django-REST and . The front end dependencies are node-js(npm), react-js and react bootstrap.
+
 ### Back End
+
+Firstly, the virtual environment is activated with 
+```cd backEnd/
+source bin/activate```
 
 ### Front End
