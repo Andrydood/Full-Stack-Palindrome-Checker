@@ -2,7 +2,7 @@
  * @Author: andreacasino
  * @Date:   2017-09-15T19:56:09+01:00
  * @Last modified by:   andreacasino
- * @Last modified time: 2017-09-17T19:41:05+01:00
+ * @Last modified time: 2017-09-17T20:12:11+01:00
  */
 
 import {Grid, Row, Col} from 'react-bootstrap';
@@ -66,6 +66,7 @@ class App extends Component{
       fetch(FETCH_URL,{
         method:'DELETE'
       }).then(
+        this.setState({page:0}),
         this.getPalindromeList()
         ).catch(function(error) {
             alert("System was not able to connect to server");
@@ -103,6 +104,64 @@ class App extends Component{
       }}
       return(<div id="stringEval"></div>)
     }
+
+
+    pageForward(){
+      const newPage = this.state.page + 1;
+      this.setState({page:newPage},function(){
+        this.setState({palindromes:null},function(){
+          this.getPalindromeList()});
+        });
+    }
+
+    pageBack(){
+      const newPage = this.state.page - 1;
+      if(newPage>=0){
+        this.setState({page:newPage},function(){
+          this.setState({palindromes:null},function(){
+            this.getPalindromeList()});
+          });
+      }
+    }
+
+
+    /*Only show back arrow if on page 1+,
+    only show front arrow if there is pages left*/
+    backButtonLayout(){
+      if(this.state.page>0){
+        return(
+            <Col xs={1} xsOffset={4} id="backButton">
+              <i
+                className="fa fa-arrow-circle-o-left fa-2x"
+                aria-hidden="true"
+                onClick={()=>this.pageBack()}></i>
+            </Col>
+        )
+      }
+      else{
+        return(
+          <Col xs={1} xsOffset={4}></Col>
+        )
+      }
+    }
+
+    forwardButtonLayout(){
+      if(this.state.palindromes){
+        if(this.state.palindromes.length<10){
+          return(
+              <Col xs={1} xsOffset={0}></Col>
+          )
+        }
+        else{
+          return(
+              <Col xs={1} xsOffset={0} id="forwardButton">
+                <i className="fa fa-arrow-circle-o-right fa-2x"
+                  aria-hidden="true"
+                  onClick={()=>this.pageForward()}></i>
+              </Col>
+          )}}
+    }
+
     //Fetch when page loads
     componentWillMount() {
       this.getPalindromeList()
@@ -155,9 +214,17 @@ class App extends Component{
             <PalindromeList
               palindromes={this.state.palindromes}>
             </PalindromeList>
-
-            
-
+            <div
+              id="buttonContainer">
+              <Grid
+                id="pageButtons">
+                {this.backButtonLayout()}
+                <Col xs={2} xsOffset={0} id="pageNum">
+                  {this.state.page}
+                </Col>
+                {this.forwardButtonLayout()}
+              </Grid>
+            </div>
             <div
                 id="deleteButtonContainer"
                 onClick={()=>this.deletePalindromes()}>

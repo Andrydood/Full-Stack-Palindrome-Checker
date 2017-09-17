@@ -2,7 +2,7 @@
  * @Author: andreacasino
  * @Date:   2017-09-15T20:49:07+01:00
  * @Last modified by:   andreacasino
- * @Last modified time: 2017-09-17T19:40:36+01:00
+ * @Last modified time: 2017-09-17T20:14:28+01:00
  */
 
 import {Grid, Row, Col} from 'react-bootstrap';
@@ -16,9 +16,12 @@ class PalindromeList extends Component{
   //Display list of palindromes, fill any empty spots with white space
   displayPalindromes(palindromes){
     var palindromeList = [];
+    // eslint-disable-next-line
     var list;
     var counter=0;
+    // eslint-disable-next-line
     if(palindromes && palindromes.length>0){
+      // eslint-disable-next-line
       list = palindromes.map((palindrome,i)=>{
         palindromeList.push(<Col
                                 className='result'
