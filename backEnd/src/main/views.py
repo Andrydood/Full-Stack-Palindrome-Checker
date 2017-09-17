@@ -1,7 +1,7 @@
 # @Author: andreacasino
 # @Date:   2017-09-14T19:03:34+01:00
 # @Last modified by:   andreacasino
-# @Last modified time: 2017-09-17T19:06:27+01:00
+# @Last modified time: 2017-09-17T19:59:24+01:00
 
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
