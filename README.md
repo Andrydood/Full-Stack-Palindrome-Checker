@@ -28,6 +28,7 @@ The dependencies of the back end are Python 3.6, Django, Django-REST and . The f
 
 Firstly, the virtual environment is activated with 
 ```cd backEnd/
-source bin/activate```
+source bin/activate
+```
 
 ### Front End
