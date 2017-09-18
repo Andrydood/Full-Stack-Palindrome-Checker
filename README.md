@@ -1,6 +1,8 @@
 ## Introduction
 
-This system is compromised of a front end written using React.js and a back end written using the Django and Django REST framework. Its use is to check if a given string is a palindrome using an API and convey this information to the user. If the string is a palindrome, it is then stored along with the rest of the confirmed palindromes, and the first 100 are shown.
+This system is compromised of a front end written using React.js and a back end written using the Django and Django REST framework. Its use is to check if a given string is a palindrome using an API and convey this information to the user. If the string is a palindrome, it is then stored along with the rest of the confirmed palindromes, and the first 100 are shown. 
+
+Future back end additions may include the introduction of accounts to store a personal list of palindromes, most searched for palindromes and the ability to search for other text patterns, all of which can easily be implemented using the existing framework. In addition, the front end can be expanded to offer a mobile application using react native.
 
 ## Usage
 
